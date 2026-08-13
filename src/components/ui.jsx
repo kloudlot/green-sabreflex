@@ -50,7 +50,7 @@ export function Header({ right }) {
         </div>
         <div>
           <h1 className="text-xl font-bold tracking-tight text-white">
-            SabreFlexx Investment Dashboard
+            SabreWorks Investment Ltd
           </h1>
           <p className="text-sm text-slate-400">
             Real Estate Investment Deposits &middot; Payables Jul&ndash;Dec 2026
