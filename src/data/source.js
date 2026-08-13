@@ -12,7 +12,7 @@ const ENDPOINT = (env.VITE_SHEET_ENDPOINT ?? "").trim();
 const TOKEN = (env.VITE_SHEET_TOKEN ?? "").trim();
 
 const CACHE_KEY = "fsgreen:payload:v1";
-const TIMEOUT_MS = 15_000;
+const TIMEOUT_MS = 60_000;
 
 /**
  * With no endpoint configured the app runs off the bundled snapshot, exactly
