@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "verify": "node scripts/verify-data.mjs"
+    "verify": "node scripts/verify-data.mjs",
+    "sample:csv": "node scripts/generate-sample-csv.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.31.0",

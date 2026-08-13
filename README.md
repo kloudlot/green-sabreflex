@@ -58,6 +58,37 @@ customer | realtor | invested | at_maturity | start_date | maturity_date | statu
 Currency cells may be plain numbers or formatted (`₦50,000,000.00`); dates may
 be real date cells, ISO text, or `DD/MM/YYYY`. All are handled.
 
+## Sample data
+
+```
+npm run sample:csv
+```
+
+Writes four ready-to-paste CSVs into [`sample-data/`](sample-data/) — one per
+tab, matching the schema above. Paste each into the correspondingly named tab
+(Sheets will split on commas automatically) and the dashboard works end to end.
+
+The ledger is **a complete 82 rows generated to hit the four bucket totals
+exactly**, so the sample sheet reconciles against the same golden-master
+figures as the real data:
+
+```
+₦1,868,015,000 invested · ₦2,486,560,650 payable · 82 deposits
+```
+
+Because it is complete, pasting it in retires the transcribed fallback in
+`raw.js` and every headline figure becomes ledger-derived — which is the
+cleanest way to confirm the whole pipeline works before real data goes in.
+
+The generator self-verifies: it round-trips its own CSVs back through
+`normalize.js` and `derive.js` and refuses to write anything if the totals
+don't reconcile. It is seeded, so re-running produces identical files.
+
+The seven ledger rows that were legible in the source export appear verbatim;
+the other 75 customers are synthetic. In `cash.csv`, BROADVIEW and SKY CAPITAL
+carry `estimated = TRUE` because those balances really were reconstructed —
+set them to `FALSE` once you enter the actual figures.
+
 ## Connecting the sheet
 
 1. **Build the tabs** above from the source export.
