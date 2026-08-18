@@ -53,7 +53,8 @@ export function Header({ right }) {
             SabreWorks Investment Ltd
           </h1>
           <p className="text-sm text-slate-400">
-            Real Estate Investment Deposits &middot; Payables Jul&ndash;Dec 2026
+            SabreFlex Dashboard 
+            {/* &middot; Payables Jul&ndash;Dec 2026 */}
           </p>
         </div>
       </div>
