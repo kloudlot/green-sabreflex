@@ -15,7 +15,7 @@ export default function MaturitySection({ buckets, totalPayable }) {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-2">
           {buckets.map((b) => (
-            <Card key={b.key}>
+            <Card key={b.key} className="border-l-4" style={{ borderLeftColor: b.color }}>
               <div className="flex items-center gap-2">
                 <span
                   className="h-2.5 w-2.5 rounded-full"
