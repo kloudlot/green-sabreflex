@@ -12,9 +12,9 @@ export function Shell({ children }) {
 }
 
 /** The standard bordered panel every section is built from. */
-export function Card({ className = "", children }) {
+export function Card({ className = "", style, children }) {
   return (
-    <div className={`rounded-2xl border border-slate-800 bg-slate-900/60 p-5 ${className}`}>
+    <div className={`rounded-2xl border border-slate-800 bg-slate-900/60 p-5 ${className}`} style={style}>
       {children}
     </div>
   );

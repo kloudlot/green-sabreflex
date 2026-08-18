@@ -9,16 +9,16 @@ import { formatNaira } from "../../lib/format";
  * live here, so a new KPI never means touching a selector.
  */
 const KPI_STYLES = {
-  invested:  { icon: PiggyBank,  accent: "text-blue-400 bg-blue-500/10" },
-  payable:   { icon: TrendingUp, accent: "text-emerald-400 bg-emerald-500/10" },
-  cash:      { icon: Landmark,   accent: "text-amber-400 bg-amber-500/10" },
-  available: { icon: Wallet,     accent: "text-violet-400 bg-violet-500/10" },
+  invested:  { icon: PiggyBank,  accent: "text-blue-400 bg-blue-500/10",    border: "border-l-blue-400" },
+  payable:   { icon: TrendingUp, accent: "text-emerald-400 bg-emerald-500/10", border: "border-l-emerald-400" },
+  cash:      { icon: Landmark,   accent: "text-amber-400 bg-amber-500/10",   border: "border-l-amber-400" },
+  available: { icon: Wallet,     accent: "text-violet-400 bg-violet-500/10",  border: "border-l-violet-400" },
 };
 
 function KpiCard({ kpi }) {
-  const { icon: Icon, accent } = KPI_STYLES[kpi.id];
+  const { icon: Icon, accent, border } = KPI_STYLES[kpi.id];
   return (
-    <Card>
+    <Card className={`border-l-4 ${border}`}>
       <div className="flex items-center justify-between">
         <span
           className={`inline-flex h-9 w-9 items-center justify-center rounded-xl ${accent}`}
